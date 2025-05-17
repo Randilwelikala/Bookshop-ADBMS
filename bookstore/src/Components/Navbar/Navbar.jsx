@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
-import { FaShoppingBag, FaUserCircle, FaBookOpen, FaLightbulb, FaGraduationCap } from "react-icons/fa";
+import { FaShoppingBag, FaUserCircle, FaSearch, FaBookOpen, FaLightbulb, FaGraduationCap } from "react-icons/fa";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const toggleDropdown = () => setDropdownOpen(prev => !prev);
 
+  // ❗ Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -15,12 +26,12 @@ const Navbar = () => {
       <ul className="nav-links">
         <li><a href="#">Home</a></li>
 
-        <li className="dropdown">
-          <a 
+        <li className="dropdown" ref={dropdownRef}>
+          <a
             href="#"
             className="dropbtn"
             onClick={(e) => {
-              e.preventDefault();  
+              e.preventDefault();
               toggleDropdown();
             }}
           >
@@ -28,25 +39,10 @@ const Navbar = () => {
           </a>
 
           {dropdownOpen && (
-            <ul className="dropdown-content" onClick={() => setDropdownOpen(false)}>
-              <li>
-                <a href="#">
-                  
-                  Fiction
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                   
-                  Non-fiction
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                   
-                  Academic
-                </a>
-              </li>
+            <ul className="dropdown-content">
+              <li><a href="#">Fiction</a></li>
+              <li><a href="#">Non-fiction</a></li>
+              <li><a href="#">Academic</a></li>
             </ul>
           )}
         </li>
@@ -56,7 +52,7 @@ const Navbar = () => {
       </ul>
 
       <div className="right-icons">
-        <input type="text" placeholder="Search books..." />
+         
         <a href="#"><FaShoppingBag className="icon" /></a>
         <a href="#"><FaUserCircle className="icon" /></a>
       </div>

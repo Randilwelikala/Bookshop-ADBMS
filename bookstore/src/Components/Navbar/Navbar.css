@@ -1,4 +1,4 @@
- 
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   background-color: white;
 }
 
- 
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,13 +19,15 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #eee;
 }
- 
+
+/* Logo */
 .logo {
   font-size: 20px;
   font-weight: bold;
   color: #111;
 }
- 
+
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -36,7 +38,7 @@ body {
   position: relative;
 }
 
- 
+/* Dropdown button style */
 .dropbtn {
   cursor: pointer;
   text-decoration: none;
@@ -49,7 +51,7 @@ body {
   transition: 0.3s;
 }
 
- 
+/* Normal nav links */
 .nav-links li a {
   text-decoration: none;
   color: #111;
@@ -61,7 +63,7 @@ body {
   transition: 0.3s;
 }
 
- 
+/* Underline hover effect */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -78,7 +80,7 @@ body {
   width: 100%;
 }
 
- 
+/* Dropdown */
 .dropdown-content {
   position: absolute;
   top: 35px;
@@ -93,12 +95,12 @@ body {
   margin: 0;
 }
 
- 
+/* Dropdown list items */
 .dropdown-content li {
   padding: 10px;
 }
 
- 
+/* Dropdown links */
 .dropdown-content li a {
   color: #111;
   text-transform: none;
@@ -113,15 +115,16 @@ body {
 .dropdown-content li a:hover {
   background-color: #f9f9f9;
 }
- 
+
+/* Right Icons */
 .right-icons {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-right: 20px; 
+  margin-right: 20px; /* Added right margin */
 }
 
- 
+/* Search Bar */
 .right-icons input {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -136,9 +139,9 @@ body {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
 }
 
- 
+/* Icon Styles */
 .icon {
-  font-size: 34px;  
+  font-size: 34px; /* Increased icon size */
   color: #111;
   cursor: pointer;
   padding: 6px;
