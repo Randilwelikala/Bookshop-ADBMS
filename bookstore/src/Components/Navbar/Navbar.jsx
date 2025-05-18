@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import { FaShoppingBag, FaUserCircle, FaSearch, FaBookOpen, FaLightbulb, FaGraduationCap } from "react-icons/fa";
 
 const Navbar = () => {
@@ -54,7 +55,7 @@ const Navbar = () => {
       <div className="right-icons">
          
         <a href="#"><FaShoppingBag className="icon" /></a>
-        <a href="#"><FaUserCircle className="icon" /></a>
+        <Link to="/login"><FaUserCircle className="icon" /></Link>
       </div>
     </nav>
   );
