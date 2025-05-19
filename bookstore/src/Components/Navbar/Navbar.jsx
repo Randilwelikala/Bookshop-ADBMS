@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { FaShoppingBag, FaUserCircle, FaSearch, FaBookOpen, FaLightbulb, FaGraduationCap } from "react-icons/fa";
+import { FaShoppingBag, FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const toggleDropdown = () => setDropdownOpen(prev => !prev);
 
-  // ❗ Close dropdown if clicked outside
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       <div className="right-icons">
          
-        <a href="#"><FaShoppingBag className="icon" /></a>
+        <Link to="/Cart"><FaShoppingBag className="icon" /></Link>
         <Link to="/login"><FaUserCircle className="icon" /></Link>
       </div>
     </nav>
