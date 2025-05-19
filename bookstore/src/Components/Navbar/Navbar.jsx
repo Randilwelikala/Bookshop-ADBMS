@@ -9,7 +9,6 @@ const Navbar = () => {
 
   const toggleDropdown = () => setDropdownOpen(prev => !prev);
 
-  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -25,36 +24,35 @@ const Navbar = () => {
       <div className="logo">BookNest</div>
 
       <ul className="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><Link to="/">Home</Link></li>
 
         <li className="dropdown" ref={dropdownRef}>
-          <a
-            href="#"
+          <Link
+            to="/category"
             className="dropbtn"
             onClick={(e) => {
-              e.preventDefault();
+              e.preventDefault(); // Prevents navigation
               toggleDropdown();
             }}
           >
             Categories ▾
-          </a>
+          </Link>
 
           {dropdownOpen && (
             <ul className="dropdown-content">
-              <li><a href="#">Fiction</a></li>
-              <li><a href="#">Non-fiction</a></li>
-              <li><a href="#">Academic</a></li>
+              <li><Link to="/category/fiction">Fiction</Link></li>
+              <li><Link to="/category/non-fiction">Non-fiction</Link></li>
+              <li><Link to="/category/academic">Academic</Link></li>
             </ul>
           )}
         </li>
 
-        <li><a href="#">Best Sellers</a></li>
-        <li><a href="#">New Arrivals</a></li>
+        <li><Link to="/bestsellers">Best Sellers</Link></li>
+        <li><Link to="/new">New Arrivals</Link></li>
       </ul>
 
       <div className="right-icons">
-         
-        <Link to="/Cart"><FaShoppingBag className="icon" /></Link>
+        <Link to="/cart"><FaShoppingBag className="icon" /></Link>
         <Link to="/login"><FaUserCircle className="icon" /></Link>
       </div>
     </nav>
