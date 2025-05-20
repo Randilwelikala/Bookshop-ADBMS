@@ -17,3 +17,28 @@
 .h-sec1-txt span{
     color: #2345a0;
 }
+
+
+/*home section two*/
+.h-sec2{
+    padding: 100px 350px;
+    align-items: center;
+    text-align: center;
+}
+.h-sec2-imge{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 80px;
+}
+.h-sec2-imge img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: solid black;
+    cursor: pointer;
+}
+.h-sec2-imge h3{
+    padding-top: 15px;
+    font-size: 15px;
+}

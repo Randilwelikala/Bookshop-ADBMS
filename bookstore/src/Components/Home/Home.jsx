@@ -12,7 +12,7 @@ const Home = () => {
       <div className="h-sec1">
         <div className="h-sec1-txt">
           <h1>
-            Buy <span>your</span> <br></br> Favorite <span>book</span> <br></br>
+            Buy <span>your</span> <br /> Favorite <span>book</span> <br />
             from <span>here</span>
           </h1>
         </div>
@@ -26,26 +26,28 @@ const Home = () => {
         <div className="h-sec2-imge">
           <div className="h-sec2-imge1">
             <img src={home6} alt="" />
-            <h3>Educational</h3>
+            <h3>
+              Educational <br />
+            </h3>
           </div>
-          <div className="h-sec2-imge2">
-            <img src={home2} alt="" />
-            <h3>Children</h3>
-          </div>
-          <div className="h-sec2-imge3">
-            <img src={home4} alt="" />
-            <h3>Fiction</h3>
-          </div>
-          <div className="h-sec2-imge4">
-            <img src={home3} alt="" />
-            <h3>Novel</h3>
-          </div>
-          <div className="h-sec2-imge5">
+          <div className="h-sec2-imges">
             <img src={home5} alt="" />
             <h3>Short Story</h3>
           </div>
-          <div className="h-sec2-imge6">
-            <img src={""} alt="" />
+          <div className="h-sec2-imges">
+            <img src={home2} alt="" />
+            <h3>Children</h3>
+          </div>
+          <div className="h-sec2-imges">
+            <img src={home4} alt="" />
+            <h3>Fiction</h3>
+          </div>
+          <div className="h-sec2-imges">
+            <img src={home3} alt="" />
+            <h3>Novel</h3>
+          </div>
+          <div className="h-sec2-imges">
+            <img src={home5} alt="" />
             <h3>Language Learning</h3>
           </div>
         </div>
