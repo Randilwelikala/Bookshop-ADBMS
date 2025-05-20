@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { FaHome, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ searchTerm, setSearchTerm }) => {
   return (
     <>
       <div className="top-bar">
@@ -12,10 +12,9 @@ const Navbar = () => {
           <a href="tel:+9470000000">+94 70000000 / 0112666666</a>
         </span>
         <span>
-          Email: <a href="">abc@gmail.com</a>
+          Email: <a href="mailto:abc@gmail.com">abc@gmail.com</a>
         </span>
         <div className="top-links">
-           
           <Link to="/login">Sign Up / Login</Link>
           <a href="#">LKR</a>
         </div>
@@ -33,7 +32,12 @@ const Navbar = () => {
           <Link to={"/home"}>
             <FaHome className="home-icon" />
           </Link>
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search books..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
           <button className="search-btn">🔍</button>
         </div>
 
@@ -43,8 +47,10 @@ const Navbar = () => {
             <span className="icon-count">0</span>
           </div>
           <div className="icon-container">
-            <FaShoppingCart />
-            <span className="icon-count">0</span>
+            <Link to={"/cart"}>
+              <FaShoppingCart />
+              <span className="icon-count">0</span>
+            </Link>
           </div>
         </div>
       </nav>
@@ -65,7 +71,6 @@ const Navbar = () => {
         <NavLink to="/novel" className="navlink">
           NOVELS
         </NavLink>
-        
         <NavLink to="/languagelearning" className="navlink">
           LANGUAGE LEARNING
         </NavLink>
