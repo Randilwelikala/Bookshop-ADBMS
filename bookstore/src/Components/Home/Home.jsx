@@ -6,6 +6,7 @@ import home4 from "../../assets/img/home4.jpg";
 import home5 from "../../assets/img/home5.jpg";
 import home6 from "../../assets/img/home6.jpg";
 import home8 from "../../assets/img/home8.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -26,7 +27,9 @@ const Home = () => {
         <h1>Book Categories</h1>
         <div className="h-sec2-imge">
           <div className="h-sec2-imge1">
-            <img src={home6} alt="" />
+            <Link to={"/education"}>
+              <img src={home6} alt="" />
+            </Link>
             <h3>
               Educational <br />
             </h3>

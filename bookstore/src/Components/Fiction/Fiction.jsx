@@ -108,12 +108,18 @@ const Fiction = () => {
     <div className="fiction-container">
       {books.map((book, index) => (
         <div className="book-card" key={index}>
-          <div className="discount-tag">NEW <span>10%</span></div>
+          <div className="discount-tag">
+            NEW <span>10%</span>
+          </div>
           <div className="book-image-container">
             <img src={book.image} alt={book.title} className="book-image" />
             <div className="hover-icons">
-              <button className="icon-btn"><FaHeart /></button>
-              <button className="icon-btn"><FaShoppingCart /></button>
+              <button className="icon-btn">
+                <FaHeart />
+              </button>
+              <button className="icon-btn">
+                <FaShoppingCart />
+              </button>
             </div>
           </div>
           <div className="book-info">

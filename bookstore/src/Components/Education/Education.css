@@ -115,3 +115,8 @@
   font-size: 14px;
   margin: 0;
 }
+
+.title h1{
+  text-align: center;
+  padding: 50px;
+}
