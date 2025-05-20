@@ -1,0 +1,16 @@
+/*home section one*/
+.h-sec1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #aae0e2;
+    padding: 0 200px;
+}
+.h-sec1-txt {
+    text-align: left;
+    font-size: 30px;
+}
+.h-sec1-imge img{
+    height: 450px;
+    width: 550px;
+}
