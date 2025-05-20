@@ -1,0 +1,126 @@
+/* Login.css */
+
+/* Container for login and register sections */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Side - Login */
+.auth-left {
+  flex: 1;
+  background-color: #2048b0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.auth-left h2 {
+  font-size: 32px;
+  margin-bottom: 40px; /* more space below heading */
+}
+
+.auth-left form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-left label {
+  margin-bottom: 8px; /* increased spacing */
+  font-weight: 600;
+  display: block;
+}
+
+.auth-left input {
+  padding: 12px;
+  margin-bottom: 30px; /* increased spacing */
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Right Side - Register */
+.auth-right {
+  flex: 1;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.auth-right h2 {
+  font-size: 32px;
+  margin-bottom: 40px; /* more space below heading */
+}
+
+.auth-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-right label {
+  margin-bottom: 8px; /* increased spacing */
+  font-weight: 600;
+  display: block;
+}
+
+.auth-right small {
+  font-size: 12px;
+  color: #666;
+  margin: -15px 0 30px 0; /* increased bottom margin for more space */
+  display: block;
+}
+
+.auth-right input {
+  padding: 12px;
+  margin-bottom: 30px; /* increased spacing */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Shared Button Style */
+.auth-btn {
+  padding: 12px;
+  background-color: #00c2df;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* space above button */
+}
+
+.auth-btn:hover {
+  background-color: #00aac0;
+}
+
+/* Remember Me & Forgot Password Section */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* increased spacing */
+  font-size: 14px;
+}
+
+.remember-forgot label {
+  cursor: pointer;
+}
+
+.remember-forgot a {
+  color: #00eaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover {
+  color: #008ba3;
+}

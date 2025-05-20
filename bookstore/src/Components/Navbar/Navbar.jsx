@@ -1,61 +1,63 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-import { FaShoppingBag, FaUserCircle } from "react-icons/fa";
+import { FaHome, FaHeart, FaShoppingCart } from "react-icons/fa";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleDropdown = () => setDropdownOpen(prev => !prev);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
-    <nav className="navbar">
-      <div className="logo">BookNest</div>
-
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-
-        <li className="dropdown" ref={dropdownRef}>
-          <Link
-            to="/category"
-            className="dropbtn"
-            onClick={(e) => {
-              e.preventDefault(); // Prevents navigation
-              toggleDropdown();
-            }}
-          >
-            Categories ▾
-          </Link>
-
-          {dropdownOpen && (
-            <ul className="dropdown-content">
-              <li><Link to="/category/fiction">Fiction</Link></li>
-              <li><Link to="/category/non-fiction">Non-fiction</Link></li>
-              <li><Link to="/category/academic">Academic</Link></li>
-            </ul>
-          )}
-        </li>
-
-        <li><Link to="/bestsellers">Best Sellers</Link></li>
-        <li><Link to="/new">New Arrivals</Link></li>
-      </ul>
-
-      <div className="right-icons">
-        <Link to="/cart"><FaShoppingBag className="icon" /></Link>
-        <Link to="/login"><FaUserCircle className="icon" /></Link>
+    <>
+      <div className="top-bar">
+        <span>
+          Call us for Web Orders: <a href="tel:+9470000000">+94 70000000 / 0112666666</a>
+        </span>
+        <span>
+          Email: <a href="">abc@gmail.com</a>
+        </span>
+        <div className="top-links">
+          <a href="#">Advanced Search</a>
+          <Link to="/login">Sign Up / Login</Link>
+          <a href="#">LKR</a>
+        </div>
       </div>
-    </nav>
+
+      <nav className="navbar">
+        <div className="logo">
+          <div>
+            <h1>BOOKLY</h1>
+            <p>THE BOOKSHOP</p>
+          </div>
+        </div>
+
+        <div className="nav-search">
+          <FaHome className="home-icon" />
+          <input type="text" placeholder="Search" />
+          <button className="search-btn">🔍</button>
+        </div>
+
+        <div className="nav-icons">
+          <div className="icon-container">
+            <FaHeart />
+            <span className="icon-count">0</span>
+          </div>
+          <div className="icon-container">
+            <FaShoppingCart />
+            <span className="icon-count">0</span>
+          </div>
+        </div>
+      </nav>
+
+      <div className="menu-bar">
+        <NavLink to="/school" className="navlink">SCHOOL LIST</NavLink>
+        <NavLink to="/sarasavi" className="navlink">FICTIONAL</NavLink>
+        <NavLink to="/sumitha" className="navlink">NON-FICTIONAL</NavLink>
+        <NavLink to="/children" className="navlink">CHILDREN</NavLink>
+        <NavLink to="/international" className="navlink">INTERNATIONAL SCHOOL BOOKS</NavLink>
+        <NavLink to="/request" className="navlink">NOVELS</NavLink>
+        <NavLink to="/ebooks" className="navlink">SHORT STORY</NavLink>
+        <NavLink to="/branches" className="navlink">LANGUAGE LEARNING
+</NavLink>
+      </div>
+    </>
   );
 };
 
