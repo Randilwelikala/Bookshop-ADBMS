@@ -35,23 +35,33 @@ const Home = () => {
             </h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home5} alt="" />
+            <Link to={"/short"}>
+              <img src={home5} alt="" />
+            </Link>
             <h3>Short Story</h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home2} alt="" />
+            <Link to={"/children"}>
+              <img src={home2} alt="" />
+            </Link>
             <h3>Children</h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home4} alt="" />
+            <Link to={"/fiction"}>
+              <img src={home4} alt="" />
+            </Link>
             <h3>Fiction</h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home3} alt="" />
+            <Link to={"/novel"}>
+              <img src={home3} alt="" />
+            </Link>
             <h3>Novel</h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home8} alt="" />
+            <Link to={"/languagelearning"}>
+              <img src={home8} alt="" />
+            </Link>
             <h3>Languages</h3>
           </div>
         </div>
