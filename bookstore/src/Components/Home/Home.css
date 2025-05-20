@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #aae0e2;
+    background-color: #b8dbdc;
     padding: 0 200px;
 }
 .h-sec1-txt {
@@ -13,4 +13,7 @@
 .h-sec1-imge img{
     height: 450px;
     width: 550px;
+}
+.h-sec1-txt span{
+    color: #2345a0;
 }
