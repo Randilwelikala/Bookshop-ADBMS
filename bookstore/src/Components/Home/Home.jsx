@@ -9,6 +9,8 @@ import home4 from "../../assets/img/home4.jpg";
 import home5 from "../../assets/img/home5.jpg";
 import home6 from "../../assets/img/home6.jpg";
 import home8 from "../../assets/img/home8.jpg";
+import h1 from "../../assets/img/h1.png";
+import h2 from "../../assets/img/h2.png";
 import cb2 from "../../assets/img/cb2.jpg";
 import F3 from "../../assets/img/F3.jpg";
 import E2 from "../../assets/img/E2.jpg";
@@ -112,7 +114,7 @@ const Home = () => {
           </h1>
         </div>
         <div className="h-sec1-imge">
-          <img src={""} alt="" />
+          <img src={h2} alt="" />
         </div>
       </div>
 
@@ -194,17 +196,22 @@ const Home = () => {
       {/*home section four*/}
       <div className="home-sec4">
         <div className="h-sec4-imge">
-          <img src={""} alt="" />
+          <img src={h1} alt="" />
         </div>
         <div className="h-sec4-txt">
           <h4>Stay with us</h4>
-          <p>dafdf</p>
+          <p>
+            Stay with us and be part of a growing community that celebrates the
+            joy of reading. From new arrivals to timeless classics, we’re here
+            to keep your shelves stocked and your mind inspired. Let every page
+            turn into a new adventure with us by your side.
+          </p>
         </div>
       </div>
 
       {/*home section five*/}
       <div className="h-sec5">
-        <h1 className="title">New Arival</h1>
+        <h1 className="title">New Arrival</h1>
         <div className="Home-container">
           {books2.map((book, index) => (
             <div className="book-card" key={index}>

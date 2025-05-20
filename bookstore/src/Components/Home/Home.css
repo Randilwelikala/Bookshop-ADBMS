@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b8dbdc;
+    background-color: #d5e5e6;
     padding: 0 200px;
 }
 .h-sec1-txt {
@@ -12,7 +12,6 @@
 }
 .h-sec1-imge img{
     height: 450px;
-    width: 550px;
 }
 .h-sec1-txt span{
     color: #2345a0;
@@ -68,15 +67,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 250px;
-    background-color: #b8dbdc;
+    padding: 0 150px;
+    background-color: #d5e5e6;
 }
 .h-sec4-imge img{
     height: 250px;
-    width: 250px;
 }
 .h-sec4-txt{
-    padding-right: 300px;
+    padding-left: 100px;
+    text-align: justify;
+}
+.h-sec4-txt h4{
+    font-size: 20px;
+    text-align: center;
 }
 
 
