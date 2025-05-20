@@ -10,7 +10,7 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 15px 20px;
   font-size: 14px;
   align-items: center;
 }
