@@ -15,9 +15,54 @@ import E2 from "../../assets/img/E2.jpg";
 import S2 from "../../assets/img/S2.jpg";
 import L5 from "../../assets/img/L5.jpg";
 import F11 from "../../assets/img/F11.jpg";
+import F4 from "../../assets/img/F4.jpg";
+import cb12 from "../../assets/img/cb12.jpg";
+import F1 from "../../assets/img/F1.jpg";
+import E8 from "../../assets/img/E8.jpg";
+import S4 from "../../assets/img/S4.jpg";
+import L6 from "../../assets/img/L6.jpg";
 
 const Home = () => {
-  const books = [
+  const books1 = [
+    {
+      title: "Fiction - LENORA BOLT ECO ENGINEER",
+      oldPrice: "LKR 2000.00",
+      newPrice: "LKR 1800.00",
+      image: F4,
+    },
+    {
+      title: "BEAR AND BIRD",
+      oldPrice: "LKR 1900.00",
+      newPrice: "LKR 1710.00",
+      image: cb12,
+    },
+    {
+      title: "Fiction - PRINCESS OLIVIA INVESTIGATES - THE",
+      oldPrice: "LKR 1900.00",
+      newPrice: "LKR 1710.00",
+      image: F1,
+    },
+    {
+      title: "How to Read a Book – Adler & Van Doren",
+      oldPrice: "LKR 2800.00",
+      newPrice: "LKR 2520.00",
+      image: E8,
+    },
+    {
+      title: "Everything Inside",
+      oldPrice: "LKR 2200.00",
+      newPrice: "LKR 1980.00",
+      image: S4,
+    },
+    {
+      title: "LEARN KOREAN",
+      oldPrice: "LKR 2040.00",
+      newPrice: "LKR 1876.00",
+      image: L6,
+    },
+  ];
+
+  const books2 = [
     {
       title: "Fiction - TRAIXIE PICKLE ART AVENGER TOXIC TAKEDOWN",
       oldPrice: "LKR 1900.00",
@@ -120,7 +165,7 @@ const Home = () => {
       <div className="h-sec3">
         <h1 className="title">Popular</h1>
         <div className="Home-container">
-          {books.map((book, index) => (
+          {books1.map((book, index) => (
             <div className="book-card" key={index}>
               <div className="discount-tag">
                 NEW <span>10%</span>
@@ -161,7 +206,7 @@ const Home = () => {
       <div className="h-sec5">
         <h1 className="title">New Arival</h1>
         <div className="Home-container">
-          {books.map((book, index) => (
+          {books2.map((book, index) => (
             <div className="book-card" key={index}>
               <div className="discount-tag">
                 NEW <span>10%</span>
