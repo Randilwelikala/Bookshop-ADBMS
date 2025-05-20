@@ -60,7 +60,7 @@ const LanguageLearning = () => {
   ];
 
   return (
-    <div className="children-container">
+    <div className="LanguageLearning-container">
       {books.map((book, index) => (
         <div className="book-card" key={index}>
           <div className="discount-tag">NEW <span>10%</span></div>
