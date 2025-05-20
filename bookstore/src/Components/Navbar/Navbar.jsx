@@ -54,7 +54,7 @@ const Navbar = () => {
         <NavLink to="/international" className="navlink">INTERNATIONAL SCHOOL BOOKS</NavLink>
         <NavLink to="/request" className="navlink">NOVELS</NavLink>
         <NavLink to="/ebooks" className="navlink">SHORT STORY</NavLink>
-        <NavLink to="/branches" className="navlink">LANGUAGE LEARNING
+        <NavLink to="/languagelearning" className="navlink">LANGUAGE LEARNING
 </NavLink>
       </div>
     </>

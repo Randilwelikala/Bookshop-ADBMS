@@ -5,6 +5,7 @@ import Login from './Components/Login/Login';
 import Cart from './Components/Cart/Cart';
 import Footer from './Components/Footer/Footer';
 import Children from './Components/Children/Children';
+import LanguageLearning from './Components/LanguageLearning/LanguageLearning';
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
 
         <Route path="/children" element={<Children />} />
-        {/* Add more routes as needed */}
+        <Route path="/languagelearning" element={<LanguageLearning />} />
+         
       </Routes>
       <Footer/>
     </Router>
