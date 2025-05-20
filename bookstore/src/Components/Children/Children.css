@@ -7,16 +7,17 @@
   justify-content: center;
   padding: 20px;
   background-color: #fdfdfd;
+  padding: 50px;
 }
 
 .book-card {
   width: 180px;
   position: relative;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
- 
   transition: transform 0.3s ease;
+  border: 1px solid #dcdcdc;
 }
 
 .book-card:hover {
