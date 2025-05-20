@@ -9,6 +9,8 @@ import LanguageLearning from "./Components/LanguageLearning/LanguageLearning";
 import Home from "./Components/Home/Home";
 import Fiction from "./Components/Fiction/Fiction";
 import Short from "./Components/Short/Short";
+import Novel from "./Components/Novel/Novel";
+import Education from "./Components/Education/Education"
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/fiction" element={<Fiction />} />
         <Route path="/children" element={<Children />} />
         <Route path="/short" element={<Short />} />
+        <Route path="/novel" element={<Novel />} />
+        <Route path="/education" element={<Education />} />
         <Route path="/languagelearning" element={<LanguageLearning />} />
       </Routes>
       <Footer />
