@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Children from "./Components/Children/Children";
 import LanguageLearning from "./Components/LanguageLearning/LanguageLearning";
 import Home from "./Components/Home/Home";
+import Fiction from "./Components/Fiction/Fiction";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/fiction" element={<Fiction />} />
         <Route path="/children" element={<Children />} />
         <Route path="/languagelearning" element={<LanguageLearning />} />
       </Routes>
