@@ -62,7 +62,7 @@ const Navbar = () => {
         <NavLink to="/request" className="navlink">
           NOVELS
         </NavLink>
-        <NavLink to="/ebooks" className="navlink">
+        <NavLink to="/short" className="navlink">
           SHORT STORY
         </NavLink>
         <NavLink to="/languagelearning" className="navlink">

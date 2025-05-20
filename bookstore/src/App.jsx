@@ -8,6 +8,7 @@ import Children from "./Components/Children/Children";
 import LanguageLearning from "./Components/LanguageLearning/LanguageLearning";
 import Home from "./Components/Home/Home";
 import Fiction from "./Components/Fiction/Fiction";
+import Short from "./Components/Short/Short";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/fiction" element={<Fiction />} />
         <Route path="/children" element={<Children />} />
+        <Route path="/short" element={<Short />} />
         <Route path="/languagelearning" element={<LanguageLearning />} />
       </Routes>
       <Footer />
