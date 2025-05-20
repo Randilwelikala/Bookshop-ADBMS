@@ -15,7 +15,7 @@ const Navbar = () => {
           Email: <a href="">abc@gmail.com</a>
         </span>
         <div className="top-links">
-          <a href="#">Advanced Search</a>
+           
           <Link to="/login">Sign Up / Login</Link>
           <a href="#">LKR</a>
         </div>
@@ -59,12 +59,13 @@ const Navbar = () => {
         <NavLink to="/children" className="navlink">
           CHILDREN
         </NavLink>
-        <NavLink to="/novel" className="navlink">
-          NOVELS
-        </NavLink>
         <NavLink to="/short" className="navlink">
           SHORT STORY
         </NavLink>
+        <NavLink to="/novel" className="navlink">
+          NOVELS
+        </NavLink>
+        
         <NavLink to="/languagelearning" className="navlink">
           LANGUAGE LEARNING
         </NavLink>
