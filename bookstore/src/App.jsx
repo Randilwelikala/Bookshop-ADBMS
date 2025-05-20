@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './Components/Navbar/Navbar';
-import Login from './Components/Login/Login';
-import Cart from './Components/Cart/Cart';
-import Footer from './Components/Footer/Footer';
-import Children from './Components/Children/Children';
-import LanguageLearning from './Components/LanguageLearning/LanguageLearning';
+import Navbar from "./Components/Navbar/Navbar";
+import Login from "./Components/Login/Login";
+import Cart from "./Components/Cart/Cart";
+import Footer from "./Components/Footer/Footer";
+import Children from "./Components/Children/Children";
+import LanguageLearning from "./Components/LanguageLearning/LanguageLearning";
+import Home from "./Components/Home/Home";
 
 const App = () => {
   return (
@@ -14,12 +15,11 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
-
+        <Route path="/home" element={<Home />} />
         <Route path="/children" element={<Children />} />
         <Route path="/languagelearning" element={<LanguageLearning />} />
-         
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

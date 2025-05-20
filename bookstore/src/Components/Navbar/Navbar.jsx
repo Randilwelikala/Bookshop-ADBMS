@@ -8,7 +8,8 @@ const Navbar = () => {
     <>
       <div className="top-bar">
         <span>
-          Call us for Web Orders: <a href="tel:+9470000000">+94 70000000 / 0112666666</a>
+          Call us for Web Orders:{" "}
+          <a href="tel:+9470000000">+94 70000000 / 0112666666</a>
         </span>
         <span>
           Email: <a href="">abc@gmail.com</a>
@@ -29,7 +30,9 @@ const Navbar = () => {
         </div>
 
         <div className="nav-search">
-          <FaHome className="home-icon" />
+          <Link to={"/home"}>
+            <FaHome className="home-icon" />
+          </Link>
           <input type="text" placeholder="Search" />
           <button className="search-btn">🔍</button>
         </div>
@@ -47,13 +50,24 @@ const Navbar = () => {
       </nav>
 
       <div className="menu-bar">
-        <NavLink to="/school" className="navlink">EDUCATIONAL</NavLink>
-        <NavLink to="/sarasavi" className="navlink">FICTION</NavLink>
-        <NavLink to="/children" className="navlink">CHILDREN</NavLink>
-        <NavLink to="/request" className="navlink">NOVELS</NavLink>
-        <NavLink to="/ebooks" className="navlink">SHORT STORY</NavLink>
-        <NavLink to="/languagelearning" className="navlink">LANGUAGE LEARNING
-</NavLink>
+        <NavLink to="/school" className="navlink">
+          EDUCATIONAL
+        </NavLink>
+        <NavLink to="/sarasavi" className="navlink">
+          FICTION
+        </NavLink>
+        <NavLink to="/children" className="navlink">
+          CHILDREN
+        </NavLink>
+        <NavLink to="/request" className="navlink">
+          NOVELS
+        </NavLink>
+        <NavLink to="/ebooks" className="navlink">
+          SHORT STORY
+        </NavLink>
+        <NavLink to="/languagelearning" className="navlink">
+          LANGUAGE LEARNING
+        </NavLink>
       </div>
     </>
   );
