@@ -129,8 +129,8 @@ body {
 
 .icon-count {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: -7px;
+  right: -10px;
   background-color: #ff5252;
   color: white;
   border-radius: 50%;
