@@ -116,7 +116,8 @@
   margin: 0;
 }
 
-.title h1{
+.title {
   text-align: center;
-  padding: 50px;
+  padding-top: 50px ;
+  color: #2345a0;
 }

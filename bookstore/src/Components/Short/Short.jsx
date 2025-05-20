@@ -57,24 +57,33 @@ const Short = () => {
   ];
 
   return (
-    <div className="LanguageLearning-container">
-      {books.map((book, index) => (
-        <div className="book-card" key={index}>
-          <div className="discount-tag">NEW <span>10%</span></div>
-          <div className="book-image-container">
-            <img src={book.image} alt={book.title} className="book-image" />
-            <div className="hover-icons">
-              <button className="icon-btn"><FaHeart /></button>
-              <button className="icon-btn"><FaShoppingCart /></button>
+    <div id="short">
+      <h1 className="title">Short Stories</h1>
+      <div className="LanguageLearning-container">
+        {books.map((book, index) => (
+          <div className="book-card" key={index}>
+            <div className="discount-tag">
+              NEW <span>10%</span>
+            </div>
+            <div className="book-image-container">
+              <img src={book.image} alt={book.title} className="book-image" />
+              <div className="hover-icons">
+                <button className="icon-btn">
+                  <FaHeart />
+                </button>
+                <button className="icon-btn">
+                  <FaShoppingCart />
+                </button>
+              </div>
+            </div>
+            <div className="book-info">
+              <h4>{book.title}</h4>
+              <p className="old-price">{book.oldPrice}</p>
+              <p className="new-price">{book.newPrice}</p>
             </div>
           </div>
-          <div className="book-info">
-            <h4>{book.title}</h4>
-            <p className="old-price">{book.oldPrice}</p>
-            <p className="new-price">{book.newPrice}</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

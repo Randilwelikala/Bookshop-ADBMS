@@ -16,7 +16,6 @@ import cb11 from "../../assets/img/cb11.jpg";
 import cb12 from "../../assets/img/cb12.jpg";
 import cb13 from "../../assets/img/cb13.jpg";
 import cb14 from "../../assets/img/cb14.jpg";
- 
 
 const Children = () => {
   const books = [
@@ -108,25 +107,33 @@ const Children = () => {
   ];
 
   return (
-    <div className="children-container">
-      {books.map((book, index) => (
-        <div className="book-card" key={index}>
-          <div className="discount-tag">NEW <span>10%</span></div>
-          <div className="book-image-container">
-            <img src={book.image} alt={book.title} className="book-image" />
-            <div className="hover-icons">
-              <button className="icon-btn"><FaHeart /></button>
-              <button className="icon-btn"><FaShoppingCart /></button>
+    <div id="children">
+      <h1 className="title">Children's Books</h1>
+      <div className="children-container">
+        {books.map((book, index) => (
+          <div className="book-card" key={index}>
+            <div className="discount-tag">
+              NEW <span>10%</span>
+            </div>
+            <div className="book-image-container">
+              <img src={book.image} alt={book.title} className="book-image" />
+              <div className="hover-icons">
+                <button className="icon-btn">
+                  <FaHeart />
+                </button>
+                <button className="icon-btn">
+                  <FaShoppingCart />
+                </button>
+              </div>
+            </div>
+            <div className="book-info">
+              <h4>{book.title}</h4>
+              <p className="old-price">{book.oldPrice}</p>
+              <p className="new-price">{book.newPrice}</p>
             </div>
           </div>
-          <div className="book-info">
-            <h4>{book.title}</h4>
-            <p className="old-price">{book.oldPrice}</p>
-            <p className="new-price">{book.newPrice}</p>
-          </div>
-        </div>
-      ))}
-      
+        ))}
+      </div>
     </div>
   );
 };

@@ -21,7 +21,7 @@
 
 /*home section two*/
 .h-sec2{
-    padding: 100px 350px;
+    padding: 80px 350px;
     align-items: center;
     text-align: center;
 }
@@ -31,14 +31,21 @@
     display: flex;
     padding-top: 80px;
 }
-.h-sec2-imge img{
+.h-sec2-imges img{
     height: 50px;
     width: 50px;
     border-radius: 50%;
     border: solid black;
     cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.h-sec2-imges img:hover{
+    transform: scale(1.05);
 }
 .h-sec2-imge h3{
     padding-top: 15px;
     font-size: 15px;
+}
+.h-sec2 h1{
+    color: #2345a0;
 }

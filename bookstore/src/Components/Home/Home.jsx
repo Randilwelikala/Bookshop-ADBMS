@@ -26,7 +26,7 @@ const Home = () => {
       <div className="h-sec2">
         <h1>Book Categories</h1>
         <div className="h-sec2-imge">
-          <div className="h-sec2-imge1">
+          <div className="h-sec2-imges">
             <Link to={"/education"}>
               <img src={home6} alt="" />
             </Link>

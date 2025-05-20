@@ -106,8 +106,8 @@ const Educational = () => {
   ];
 
   return (
-    <div className="title" id="education">
-      <h1>Educational Books</h1>
+    <div id="education">
+      <h1 className="title">Educational Books</h1>
       <div className="children-container">
         {books.map((book, index) => (
           <div className="book-card" key={index}>
