@@ -21,7 +21,7 @@
 
 /*home section two*/
 .h-sec2{
-    padding: 80px 350px;
+    padding: 80px 350px 30px 350px;
     align-items: center;
     text-align: center;
 }
@@ -40,7 +40,7 @@
     transition: transform 0.5s ease;
 }
 .h-sec2-imges img:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 .h-sec2-imge h3{
     padding-top: 15px;
@@ -51,8 +51,19 @@
 }
 
 
-/*home section three*/
-.home-sec3{
+/*home section three and five*/
+.Home-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fdfdfd;
+  padding: 50px 0 100px 0;
+}
+
+/*home section four*/
+.home-sec4{
     height: 300px;
     display: flex;
     align-items: center;
@@ -60,10 +71,12 @@
     padding: 0 250px;
     background-color: #b8dbdc;
 }
-.h-sec3-imge img{
+.h-sec4-imge img{
     height: 250px;
     width: 250px;
 }
-.h-sec3-txt{
+.h-sec4-txt{
     padding-right: 300px;
 }
+
+

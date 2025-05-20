@@ -1,16 +1,64 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
+
 import home2 from "../../assets/img/home2.jpg";
 import home3 from "../../assets/img/home3.jpg";
 import home4 from "../../assets/img/home4.jpg";
 import home5 from "../../assets/img/home5.jpg";
 import home6 from "../../assets/img/home6.jpg";
 import home8 from "../../assets/img/home8.jpg";
-import { Link } from "react-router-dom";
+import cb2 from "../../assets/img/cb2.jpg";
+import F3 from "../../assets/img/F3.jpg";
+import E2 from "../../assets/img/E2.jpg";
+import S2 from "../../assets/img/S2.jpg";
+import L5 from "../../assets/img/L5.jpg";
+import F11 from "../../assets/img/F11.jpg";
 
 const Home = () => {
+  const books = [
+    {
+      title: "Fiction - TRAIXIE PICKLE ART AVENGER TOXIC TAKEDOWN",
+      oldPrice: "LKR 1900.00",
+      newPrice: "LKR 1710.00",
+      image: F11,
+    },
+    {
+      title: "ROCK STAR DETECTIVES -",
+      oldPrice: "LKR 2140.00",
+      newPrice: "LKR 1926.00",
+      image: cb2,
+    },
+    {
+      title: "Fiction - THE DETENTION DETECTIVES",
+      oldPrice: "LKR 2140.00",
+      newPrice: "LKR 1926.00",
+      image: F3,
+    },
+    {
+      title: "A Short History of Nearly Everything – Bill Bryson",
+      oldPrice: "LKR 3400.00",
+      newPrice: "LKR 3060.00",
+      image: E2,
+    },
+    {
+      title: "Dubliners",
+      oldPrice: "LKR 2300.00",
+      newPrice: "LKR 1950.00",
+      image: S2,
+    },
+    {
+      title: "DISCOURSE ANALYSIS",
+      oldPrice: "LKR 2000.00",
+      newPrice: "LKR 1400.00",
+      image: L5,
+    },
+  ];
+
   return (
     <div className="home" id="home">
+      {/*home section one*/}
       <div className="h-sec1">
         <div className="h-sec1-txt">
           <h1>
@@ -23,6 +71,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/*home section two*/}
       <div className="h-sec2">
         <h1>Book Categories</h1>
         <div className="h-sec2-imge">
@@ -67,13 +116,74 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-sec3">
-        <div className="h-sec3-imge">
+      {/*home section three*/}
+      <div className="h-sec3">
+        <h1 className="title">Popular</h1>
+        <div className="Home-container">
+          {books.map((book, index) => (
+            <div className="book-card" key={index}>
+              <div className="discount-tag">
+                NEW <span>10%</span>
+              </div>
+              <div className="book-image-container">
+                <img src={book.image} alt={book.title} className="book-image" />
+                <div className="hover-icons">
+                  <button className="icon-btn">
+                    <FaHeart />
+                  </button>
+                  <button className="icon-btn">
+                    <FaShoppingCart />
+                  </button>
+                </div>
+              </div>
+              <div className="book-info">
+                <h4>{book.title}</h4>
+                <p className="old-price">{book.oldPrice}</p>
+                <p className="new-price">{book.newPrice}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/*home section four*/}
+      <div className="home-sec4">
+        <div className="h-sec4-imge">
           <img src={""} alt="" />
         </div>
-        <div className="h-sec3-txt">
+        <div className="h-sec4-txt">
           <h4>Stay with us</h4>
           <p>dafdf</p>
+        </div>
+      </div>
+
+      {/*home section five*/}
+      <div className="h-sec5">
+        <h1 className="title">New Arival</h1>
+        <div className="Home-container">
+          {books.map((book, index) => (
+            <div className="book-card" key={index}>
+              <div className="discount-tag">
+                NEW <span>10%</span>
+              </div>
+              <div className="book-image-container">
+                <img src={book.image} alt={book.title} className="book-image" />
+                <div className="hover-icons">
+                  <button className="icon-btn">
+                    <FaHeart />
+                  </button>
+                  <button className="icon-btn">
+                    <FaShoppingCart />
+                  </button>
+                </div>
+              </div>
+              <div className="book-info">
+                <h4>{book.title}</h4>
+                <p className="old-price">{book.oldPrice}</p>
+                <p className="new-price">{book.newPrice}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
