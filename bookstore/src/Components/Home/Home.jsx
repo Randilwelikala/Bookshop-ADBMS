@@ -5,6 +5,7 @@ import home3 from "../../assets/img/home3.jpg";
 import home4 from "../../assets/img/home4.jpg";
 import home5 from "../../assets/img/home5.jpg";
 import home6 from "../../assets/img/home6.jpg";
+import home8 from "../../assets/img/home8.jpg";
 
 const Home = () => {
   return (
@@ -47,8 +48,8 @@ const Home = () => {
             <h3>Novel</h3>
           </div>
           <div className="h-sec2-imges">
-            <img src={home5} alt="" />
-            <h3>Language Learning</h3>
+            <img src={home8} alt="" />
+            <h3>Languages</h3>
           </div>
         </div>
       </div>
