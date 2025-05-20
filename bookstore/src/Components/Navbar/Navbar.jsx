@@ -47,11 +47,9 @@ const Navbar = () => {
       </nav>
 
       <div className="menu-bar">
-        <NavLink to="/school" className="navlink">SCHOOL LIST</NavLink>
-        <NavLink to="/sarasavi" className="navlink">FICTIONAL</NavLink>
-        <NavLink to="/sumitha" className="navlink">NON-FICTIONAL</NavLink>
+        <NavLink to="/school" className="navlink">EDUCATIONAL</NavLink>
+        <NavLink to="/sarasavi" className="navlink">FICTION</NavLink>
         <NavLink to="/children" className="navlink">CHILDREN</NavLink>
-        <NavLink to="/international" className="navlink">INTERNATIONAL SCHOOL BOOKS</NavLink>
         <NavLink to="/request" className="navlink">NOVELS</NavLink>
         <NavLink to="/ebooks" className="navlink">SHORT STORY</NavLink>
         <NavLink to="/languagelearning" className="navlink">LANGUAGE LEARNING
