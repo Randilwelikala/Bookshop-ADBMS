@@ -49,3 +49,21 @@
 .h-sec2 h1{
     color: #2345a0;
 }
+
+
+/*home section three*/
+.home-sec3{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 250px;
+    background-color: #b8dbdc;
+}
+.h-sec3-imge img{
+    height: 250px;
+    width: 250px;
+}
+.h-sec3-txt{
+    padding-right: 300px;
+}
