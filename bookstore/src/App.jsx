@@ -10,13 +10,14 @@ import Home from "./Components/Home/Home";
 import Fiction from "./Components/Fiction/Fiction";
 import Short from "./Components/Short/Short";
 import Novel from "./Components/Novel/Novel";
-import Education from "./Components/Education/Education"
+import Education from "./Components/Education/Education";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} /> {/* Home page as default */}
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/home" element={<Home />} />
