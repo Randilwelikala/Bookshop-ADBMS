@@ -6,6 +6,10 @@ body {
 
 /* Top bar */
 .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #2345a0;
   color: white;
   display: flex;
@@ -13,6 +17,7 @@ body {
   padding: 15px 20px;
   font-size: 14px;
   align-items: center;
+  z-index: 1000;
 }
 
 .top-bar a {
@@ -29,12 +34,22 @@ body {
 
 /* Main Navbar */
 .navbar {
+  position: fixed;
+  top: 50px; /* height of the top-bar */
+  left: 0;
+  right: 0;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
   background-color: white;
   border-bottom: 1px solid #ccc;
+}
+
+/* Add spacing for the fixed elements */
+.page-content {
+  padding-top: 140px; /* 50px top-bar + approx. 90px navbar */
 }
 
 /* Logo section */
@@ -156,6 +171,7 @@ body {
   padding: 12px 0;
   font-size: 14px;
   border-top: 1px solid #ddd;
+  margin-top: 140px; /* optional if menu is below fixed nav */
 }
 
 /* NavLink styles for menu items */
@@ -176,7 +192,6 @@ body {
 .navlink.active {
   color: #00c2df;
   font-weight: bold;
- 
 }
 
 /* Highlight class (optional, for featured tab) */
@@ -185,6 +200,5 @@ body {
 }
 
 .navlink.highlight.active {
-  
   font-weight: bold;
 }
