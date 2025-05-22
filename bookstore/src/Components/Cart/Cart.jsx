@@ -1,112 +1,114 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { FaTrashAlt, FaPlus, FaMinus } from "react-icons/fa";
 import './Cart.css';
-import { FaTrash } from 'react-icons/fa';
-import br from '../../assets/img/br.jpg';
- 
-
-const initialCartItems = [
-  {
-    id: 1,
-    name: 'The Witch',
-    auther: 'Enid Blyton',
-    year: '1989',
-    price: 37,
-    quantity: 1,
-    
-    image: br
-  },
-  {
-    id: 2,
-    name: 'The Witch',
-    auther: 'Enid Blyton',
-    year: '1989',
-    price: 133,
-    quantity: 2,
-    
-    image: br
-  },
-  {
-    id: 3,
-    name: 'The Witch',
-    auther: 'Enid Blyton',
-    year: '1989',
-    price: 77,
-    quantity: 2,
-    
-    image: br
-  }
-];
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState(initialCartItems);
+  const [cartItems, setCartItems] = useState([]);
 
-  const updateQuantity = (id, delta) => {
-    setCartItems(prevItems =>
-      prevItems.map(item =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + delta) }
-          : item
-      )
-    );
+  useEffect(() => {
+    fetchCart();
+  }, []);
+
+  const fetchCart = () => {
+    axios.get("http://localhost:5000/cart")
+      .then(res => setCartItems(res.data))
+      .catch(err => console.error(err));
   };
 
-  const deleteItem = (id) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5000/cart/${id}`);
+      setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    } catch (err) {
+      console.error("Failed to delete item:", err);
+    }
   };
 
-  const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const updateQuantity = async (id, newQuantity) => {
+    if (newQuantity < 1) return;
+    try {
+      await axios.put(`http://localhost:5000/cart/${id}`, { quantity: newQuantity });
+      setCartItems(prevItems =>
+        prevItems.map(item =>
+          item.id === id ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    } catch (err) {
+      console.error("Failed to update quantity:", err);
+    }
+  };
+
+  const getTotal = () => {
+    return cartItems
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
+  };
 
   return (
     <div className="cart-container">
-      <table className="cart-table">
-        <thead>
-          <tr>
-            <th>BOOK DETAILS</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-             
-            <th>SUBTOTAL</th>
-            <th>ACTION</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartItems.map(item => (
-            <tr key={item.id}>
-              <td className="product-details">
-                <img src={item.image} alt={item.name} />
-                <div>
-                  <div className="product-name">{item.name}</div>
-                  <div className="product-meta">Auther : {item.auther}</div>
-                  <div className="product-meta">Year : {item.year}</div>
-                </div>
-              </td>
-              <td>${item.price.toFixed(2)}</td>
-              <td>
-                <div className="quantity-controls">
-                  <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-                  <span>{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, 1)}>+</button>
-                </div>
-              </td>
-              
-              <td>${(item.price * item.quantity).toFixed(2)}</td>
-              <td><FaTrash className="delete-icon" onClick={() => deleteItem(item.id)} /></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="summary">
-        <div className="summary-row">
-          <span>Sub Total</span> 
-          <span>${total.toFixed(2)}</span>
-        </div>
-       
-      </div>
-      <br /><br />
-      <div className="checkoutbtn">
-        <button className="checkout-btn">Log in to Checkout</button>
-      </div>
-      
+      <h2>Your Cart</h2>
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
+        <>
+          <table className="cart-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price (LKR)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <img src={item.image} alt={item.title} className="product-img" />
+                  </td>
+                  <td>
+                    <div className="product-name">{item.title}</div>
+                    <div className="product-meta">{item.author}</div>
+                  </td>
+                  <td>
+                    <div className="quantity-controls">
+                      <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>
+                        <FaMinus />
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                        <FaPlus />
+                      </button>
+                    </div>
+                  </td>
+                  <td>{(item.price * item.quantity).toFixed(2)}</td>
+                  <td>
+                    <FaTrashAlt
+                      className="delete-icon"
+                      onClick={() => handleDelete(item.id)}
+                    />
+                  </td>
+                </tr>
+              ))}
+
+              {/* Subtotal Row */}
+              <tr className="subtotal-row">
+                <td colSpan="3" style={{ fontStyle: "italic", color: "#333" }}>
+                  Subtotal for: {cartItems.map(item => item.title).join(", ")}
+                </td>
+                <td style={{ fontWeight: "bold", textAlign: "right" }}>Subtotal (LKR):</td>
+                <td style={{ fontWeight: "bold" }}>{getTotal()}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="summary">
+            <button className="checkout-btn">Checkout</button>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { FaHome, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
+import axios from "axios";
+
 
 const Navbar = ({ searchTerm, setSearchTerm }) => {
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const fetchCartCount = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/cart/count");
+        setCartCount(res.data.total || 0);
+      } catch (err) {
+        console.error("Failed to fetch cart count", err);
+      }
+    };
+
+    fetchCartCount();
+    const intervalId = setInterval(fetchCartCount, 1000); // every 5 seconds
+
+  return () => clearInterval(intervalId); // cleanup on unmount
+  }, []);
+
   return (
     <>
       <div className="top-bar">
@@ -49,7 +69,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
           <div className="icon-container">
             <Link to={"/cart"}>
               <FaShoppingCart />
-              <span className="icon-count">0</span>
+              <span className="icon-count">{cartCount}</span>
             </Link>
           </div>
         </div>

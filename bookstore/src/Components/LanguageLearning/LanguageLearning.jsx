@@ -1,6 +1,7 @@
 import React from "react";
 import "./LanguageLearning.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import axios from "axios";
 
 import L1 from "../../assets/img/L1.jpg";
 import L2 from "../../assets/img/L2.jpg";
@@ -49,15 +50,32 @@ const LanguageLearning = () => {
       image: L6,
     },
     {
-      title: "ENGLISH LEARN FOR BEGINERS",
+      title: "ENGLISH LEARN FOR BEGINNERS",
       oldPrice: "LKR 1900.00",
       newPrice: "LKR 1710.00",
       image: L7,
     },
   ];
 
+  const addToCart = async (book) => {
+    const price = parseFloat(
+      book.newPrice.replace("LKR", "").replace(",", "").trim()
+    );
+    try {
+      await axios.post("http://localhost:5000/cart", {
+        title: book.title,
+        price,
+        quantity: 1,
+        // image: book.image, // add if needed
+      });
+      alert("Added to cart!");
+    } catch (error) {
+      alert("Error adding to cart");
+    }
+  };
+
   return (
-    <div id="languagelearnng">
+    <div id="languagelearning">
       <h1 className="title">Language Learning Books</h1>
       <div className="LanguageLearning-container">
         {books.map((book, index) => (
@@ -71,7 +89,7 @@ const LanguageLearning = () => {
                 <button className="icon-btn">
                   <FaHeart />
                 </button>
-                <button className="icon-btn">
+                <button className="icon-btn" onClick={() => addToCart(book)}>
                   <FaShoppingCart />
                 </button>
               </div>

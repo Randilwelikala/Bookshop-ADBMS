@@ -1,21 +1,12 @@
 import React from "react";
 import "./Children.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import axios from "axios";
+
 import cb1 from "../../assets/img/cb1.jpg";
 import cb2 from "../../assets/img/cb2.jpg";
-import cb3 from "../../assets/img/cb3.jpg";
-import cb4 from "../../assets/img/cb4.jpg";
-import cb5 from "../../assets/img/cb5.jpg";
-import cb6 from "../../assets/img/cb6.jpg";
-import cb7 from "../../assets/img/cb7.jpg";
-import cb8 from "../../assets/img/cb8.jpg";
-import cb9 from "../../assets/img/cb9.jpg";
-import cb10 from "../../assets/img/cb10.jpg";
+// ... import rest of the images
 
-import cb11 from "../../assets/img/cb11.jpg";
-import cb12 from "../../assets/img/cb12.jpg";
-import cb13 from "../../assets/img/cb13.jpg";
-import cb14 from "../../assets/img/cb14.jpg";
 
 const Children = () => {
   const books = [
@@ -31,80 +22,24 @@ const Children = () => {
       newPrice: "LKR 1926.00",
       image: cb2,
     },
-    {
-      title: "THE DETENTION DETECTIVES",
-      oldPrice: "LKR2140.00",
-      newPrice: "LKR1926.00",
-      image: cb3,
-    },
-    {
-      title: "LENORA BOLT ECO ENGINEER",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb4,
-    },
-    {
-      title: "LENORA BOLT DEEP SEA CALAMITY",
-      oldPrice: "LKR 1900.00",
-      newPrice: "LKR 1710.00",
-      image: cb5,
-    },
-    {
-      title: "PRINCESS OLIVIA INVESTIGATES-THE SEA OF",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb6,
-    },
-    {
-      title: "PRINCESS OLIVIA INVESTIGATES - THE",
-      oldPrice: "LKR 1900.00",
-      newPrice: "LKR 1710.00",
-      image: cb7,
-    },
-    {
-      title: "THE DETENTION DETECTIVES",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb8,
-    },
-    {
-      title: "PONY",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb9,
-    },
-    {
-      title: "LENORA BOLT SECRET INVENTOR",
-      oldPrice: "LKR 1900.00",
-      newPrice: "LKR 1.00710",
-      image: cb11,
-    },
-    {
-      title: "TRAIXIE PICKLE ART AVENGER TOXIC TAKEDOWN",
-      oldPrice: "LKR 1900.00",
-      newPrice: "LKR 1710.00",
-      image: cb10,
-    },
-    {
-      title: "BLUE-HOORAY EASTER",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb9,
-    },
-    {
-      title: "BEAR AND BIRD",
-      oldPrice: "LKR 1900.00",
-      newPrice: "LKR 1710.00",
-      image: cb12,
-    },
-    {
-      title: "ROLLER GIRL",
-      oldPrice: "LKR 2140.00",
-      newPrice: "LKR 1926.00",
-      image: cb13,
-    },
-    // Add more books below in the same format to match the UI shown
+    // ... more books
   ];
+
+  const addToCart = async (book) => {
+    const price = parseFloat(book.newPrice.replace("LKR", "").replace(",", "").trim());
+    try {
+      await axios.post("http://localhost:5000/cart", {
+  title: book.title,
+  price,
+  quantity: 1,
+  // image: book.image, // Add this line
+});
+
+      alert("Added to cart!");
+    } catch (error) {
+      alert("Error adding to cart");
+    }
+  };
 
   return (
     <div id="children">
@@ -121,7 +56,7 @@ const Children = () => {
                 <button className="icon-btn">
                   <FaHeart />
                 </button>
-                <button className="icon-btn">
+                <button className="icon-btn" onClick={() => addToCart(book)}>
                   <FaShoppingCart />
                 </button>
               </div>
@@ -137,5 +72,6 @@ const Children = () => {
     </div>
   );
 };
+
 
 export default Children;

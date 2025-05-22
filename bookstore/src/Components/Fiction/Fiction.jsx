@@ -1,6 +1,8 @@
 import React from "react";
 import "./Fiction.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import axios from "axios";
+
 import F1 from "../../assets/img/F1.jpg";
 import F2 from "../../assets/img/F2.jpg";
 import F3 from "../../assets/img/F3.jpg";
@@ -104,6 +106,21 @@ const Fiction = () => {
     },
   ];
 
+  const addToCart = async (book) => {
+    const price = parseFloat(book.newPrice.replace("LKR", "").replace(",", "").trim());
+    try {
+      await axios.post("http://localhost:5000/cart", {
+        title: book.title,
+        price,
+        quantity: 1,
+        // image: book.image, // optional
+      });
+      alert("Added to cart!");
+    } catch (error) {
+      alert("Error adding to cart");
+    }
+  };
+
   return (
     <div id="fiction">
       <h1 className="title">Fictional Books</h1>
@@ -119,7 +136,7 @@ const Fiction = () => {
                 <button className="icon-btn">
                   <FaHeart />
                 </button>
-                <button className="icon-btn">
+                <button className="icon-btn" onClick={() => addToCart(book)}>
                   <FaShoppingCart />
                 </button>
               </div>
