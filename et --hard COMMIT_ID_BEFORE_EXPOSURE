@@ -1,0 +1,254 @@
+[33mcommit 5280cafd90c96d959d13dac11e4a0dcf78490b46[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: randilwelikala <randilgimantha646@gmail.com>
+Date:   Fri May 23 13:36:09 2025 +0530
+
+     power bi report added
+
+[33mcommit 2778f0f98c7a35708a51c80da1304381ba205cb9[m
+Author: randilwelikala <randilgimantha646@gmail.com>
+Date:   Thu May 22 22:03:30 2025 +0530
+
+    create cart,dahsboard
+
+[33mcommit 7b0551a4af40f73d72a402f6fc676c75c2c7bfed[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Thu May 22 11:58:56 2025 +0530
+
+    nav bar
+
+[33mcommit fd7ad04f0bfff97cb5f47c1d95c2c96a526a3b05[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Thu May 22 11:55:04 2025 +0530
+
+    app.jsx
+
+[33mcommit eff7f35b25ab7471a6de2df856857a2213fedf2d[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 21:12:04 2025 +0530
+
+    update navbar
+
+[33mcommit cc18230858e5b24d3b887293db8a66ce27eb1bc2[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 21:00:24 2025 +0530
+
+    final home page
+
+[33mcommit f4ad4669b8cc7beb0da8ccd292197d40821fed65[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 19:53:51 2025 +0530
+
+    new arrival books
+
+[33mcommit 7cc233cd594fc4a04e9fa25d6ba26aea2d22795f[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 17:58:56 2025 +0530
+
+    add popular books
+
+[33mcommit 60528b29ea98300e4e279688ad8f09b1f2590eed[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 16:08:27 2025 +0530
+
+    link categories
+
+[33mcommit 0b66514c0b593134309e9ac405e9b422ecb293ca[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 16:04:20 2025 +0530
+
+    home section 3
+
+[33mcommit 44badf64c7ee70ed720a67be2047bf1cc27ce5c5[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 15:51:41 2025 +0530
+
+    update title
+
+[33mcommit 328b0c50d79705a8f9ed062565da6ff3acb5c91e[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 14:47:01 2025 +0530
+
+    title update
+
+[33mcommit 223fab33a3c86afcf961bc087ef1361584b67203[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 14:23:08 2025 +0530
+
+    update img
+
+[33mcommit 9d26c820ae1b429849f3b4ddd793cfd84835adc2[m
+Merge: ddbadee c1b2ef5
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:59:30 2025 +0530
+
+    Merge branch 'main' of https://github.com/Awanthiy/E-commerce-Book-Store
+
+[33mcommit ddbadee915fa66a5a18b4b31deaefb47b6629703[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:59:03 2025 +0530
+
+    update home sec2
+
+[33mcommit c1b2ef5f1d4edb130ffd3d8b5c80998d2d145657[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 13:57:03 2025 +0530
+
+    completed nav bar
+
+[33mcommit 5e843928eaa78823d9c937fb0763526b901fa85f[m
+Merge: 3bb1534 861f7d8
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:48:27 2025 +0530
+
+    Merge branch 'main' of https://github.com/Awanthiy/E-commerce-Book-Store
+
+[33mcommit 3bb15340c038bc62cb9aae3b34bc79ab1123f13f[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:48:12 2025 +0530
+
+    update
+
+[33mcommit 861f7d86dc5f135bedc08df479cbe69d93b5e428[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 13:47:07 2025 +0530
+
+    top bar
+
+[33mcommit 653b301a85967c3d8ea67ab7985bd5acf0588710[m
+Merge: 3cb3029 289fff6
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:46:27 2025 +0530
+
+    Merge branch 'main' of https://github.com/Awanthiy/E-commerce-Book-Store
+
+[33mcommit 3cb3029abdcfe9d28142c79044834c7ab72b36fa[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:46:06 2025 +0530
+
+    home section 2
+
+[33mcommit 289fff6449feeb065adfcfee5605a7b7e8721bdc[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 13:37:08 2025 +0530
+
+    Education page
+
+[33mcommit 31e69a82c1c3eb4b96df250a9ee35bf65f26c970[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:34:37 2025 +0530
+
+    update home sec 1
+
+[33mcommit 8a27911d78e19721e0b957a2cb7aed741a588fc5[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 13:29:53 2025 +0530
+
+    update home section 1
+
+[33mcommit d0770d660d71813e6a949d7494ce1fb5b3e0f935[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 12:51:30 2025 +0530
+
+    Short story page
+
+[33mcommit f5d9097f9a2b970b5f736d9674b55a3c573b82ea[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 12:32:39 2025 +0530
+
+    Fiction completed page
+
+[33mcommit 9ab1f1b4cdeb075f68540834ff4e1b328d171636[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 12:23:44 2025 +0530
+
+    home section 1
+
+[33mcommit f977d10bb4e5b56f7b618a0799077058bf7fe1d6[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 12:04:54 2025 +0530
+
+    update
+
+[33mcommit c025babf02554735c8f6c105490a736983673747[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 11:48:56 2025 +0530
+
+    route home
+
+[33mcommit da81195013a729cd6014c8e495f9c8b09a66233f[m
+Author: SNimsara <nimsaragunasekara123@gmail.com>
+Date:   Tue May 20 11:31:29 2025 +0530
+
+    change name
+
+[33mcommit 3222a8677a2ecf7465c327f2a4cac06b50a385ee[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 11:28:52 2025 +0530
+
+    NAV
+
+[33mcommit 16783828b317a66c6228dfccaaa6a5725b8528ab[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 11:25:27 2025 +0530
+
+    edited
+
+[33mcommit 2337cfbd2da732ca07cdc0fb22b48bf39db05640[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 11:19:10 2025 +0530
+
+    Language page
+
+[33mcommit f31e9185ee9c6609f354ffb67d8c23dbcb98cb9a[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 10:27:14 2025 +0530
+
+    Children page
+
+[33mcommit 9284e73e9ce3f0c1ad23bd17098858877c273e70[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Tue May 20 09:39:25 2025 +0530
+
+    Updated nav bar
+
+[33mcommit 8dc88afb52749504ed8101d6be2c28ffd3e04ad4[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Mon May 19 16:17:44 2025 +0530
+
+    Category
+
+[33mcommit de936af00d9d57ea07e6eea5cf0c80be82413f00[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Mon May 19 10:51:52 2025 +0530
+
+    CART
+
+[33mcommit 478467208aa5aec62bc5d2edf514ae0daef8fc2b[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Sun May 18 09:09:54 2025 +0530
+
+    Sign up and Log in
+
+[33mcommit 437e74d6a0440f387408824650b28a1d149554d6[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Sat May 17 21:22:27 2025 +0530
+
+    nav
+
+[33mcommit d44b8d5df1181ae40ebab56c428ea2f43f4983e6[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Sat May 17 17:15:36 2025 +0530
+
+    Completed Navbar.jsx and css
+
+[33mcommit 226a56eed8e1c5d468dfb289fb7e74dd3f483de1[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Sat May 17 13:59:23 2025 +0530
+
+    Navbar
+
+[33mcommit 4f36725a754c2cd2df736eb2bccb9d8a9c0fccec[m
+Author: Awanthi Malawanage <121420903+Awanthiy@users.noreply.github.com>
+Date:   Sat May 17 13:30:08 2025 +0530
+
+    first commit
